@@ -8,7 +8,7 @@ mysql database to golang struct for gorm model
 
 # install
 ```shell
-go install github.com/gangming/sql2struct@latest
+go install github.com/miming1688/sql2struct@latest
 ```
 
 
