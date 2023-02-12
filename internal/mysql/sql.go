@@ -106,7 +106,7 @@ func ParseMysqlDDL(s string) (Table, error) {
 func (t *Table) GenerateCode() string {
 	fromTmpl := tmpl
 	for i, field := range t.Fields {
-		tag := "`" + config.Cnf.DBTag + ":\"column:" + field.Name + "\""
+		tag := "`" + config.Cnf.DBTag + ":\"column:" + field.Name +";comment:"+field.Comment+ "\""
 		if field.IsPK {
 			tag += ";primary_key\" "
 		}
